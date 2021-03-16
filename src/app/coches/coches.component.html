@@ -1,0 +1,15 @@
+
+  <!-- <div *ngIf="cargando" class="loader"></div> -->
+  <!-- <mat-spinner></mat-spinner> -->
+
+  <!-- <ul class="list-group">
+      <li *ngFor="let coche of coches" class="list-group-item">
+          <a (click)="agregarCoche(coche)" [routerLink]="['/informacion', coche.payload.doc.data().id]">{{coche.payload.doc.data().fabricante}} {{coche.payload.doc.data().modelo}}</a>
+      </li>
+  </ul> -->
+
+  <div class="card-deck">
+    <div class="card" *ngFor="let coche of coches">
+      <app-cochedetalle [coche]="coche" (cocheComprado)="comprar($event)"></app-cochedetalle>
+    </div>
+  </div>

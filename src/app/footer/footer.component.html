@@ -1,0 +1,14 @@
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+  <div class="row">
+  <div class="col-3 col-md">
+      <img class="mb-2" src="../../assets/iconoCoche.png" alt="" width="64" height="64">
+      <small class="d-block mb-3 text-muted">&copy; 2022</small>
+  </div>
+  <div class="col-3 col-md">
+      <h5>Coches comprados</h5>
+      <ul class="list-unstyled text-small" *ngIf="CocheClicked.verListado()">
+          <li class="link-secondary" *ngFor="let coche of CocheClicked.verListado()">{{coche}}</li>
+      </ul>
+  </div>
+  </div>
+</footer>

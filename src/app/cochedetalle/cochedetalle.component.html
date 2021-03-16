@@ -1,0 +1,14 @@
+<img src="../../assets/{{coche.payload.doc.data().imagen}}" class="card-img-top" alt="..." >
+<div class="card-body">
+  <h5 class="card-title">{{coche.payload.doc.data().fabricante}} {{coche.payload.doc.data().modelo}}</h5>
+  <p class="card-text">{{coche.payload.doc.data().fabricante}} {{coche.payload.doc.data().modelo}}</p>
+  <p class="card-text">Precio: {{coche.payload.doc.data().precio | currency:"&euro;"}}</p>
+  <button type="button" class="btn btn-success" [disabled]="isdisabled()" (click)="comprar(coche)">{{compra}}</button>
+</div>
+
+
+ <!-- <ul class="list-group">
+      <li *ngFor="let coche of coches" class="list-group-item">
+          <a (click)="agregarCoche(coche)" [routerLink]="['/informacion', coche.payload.doc.data().id]">{{coche.payload.doc.data().fabricante}} {{coche.payload.doc.data().modelo}}</a>
+      </li>
+  </ul> -->
